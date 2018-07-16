@@ -39,7 +39,7 @@ body {
 .sub-section {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 16px;
+  margin: 0 16px;
   align-items: flex-start;
   padding-top: 20px;
   padding-bottom: 50px;
@@ -59,9 +59,9 @@ body {
 /* Mailchimp */
 
 #mc_embed_signup {
-  background: none;
   font-family: var(--font-stack);
   transition: transform .5s ease-in-out;
+  border: 1px solid rgba(0,0,0,0);
 }
 
 #mc_embed_signup_scroll {
@@ -86,7 +86,6 @@ body {
   font-size: 1.125rem;
   width: 100%;
   color: #778895;
-  border-radius: 5px 0 0 5px;
 }
 
 #mc_embed_signup input[type='submit'] {
@@ -94,7 +93,6 @@ body {
   color: white;
   font-weight: 600;
   display: inline-block;
-  border-radius: 0 5px 5px 0;
 }
 
 /* Typography */
@@ -177,4 +175,10 @@ h4 .blocked::after {
 
 p .emphasis {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 470px) {
+  #mc_embed_signup_scroll {
+      flex-direction: column;
+  }
 }
