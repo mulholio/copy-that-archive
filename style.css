@@ -1,1 +1,168 @@
+@import url("./node_modules/normalize.css");
 
+/*
+ * VARIABLES ===================================================================
+ */
+:root {
+  /* colors */
+  --primary-purple: #555bcf;
+  --lightest-grey: #f7fcff;
+  --deep-purple: #0a0d3b;
+  --not-white-but-purple: #9295ca;
+  --purple-gradient: linear-gradient(-180deg, #5860CC 0%, #282EA1 100%);
+  /* font */
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*
+ * BASE ========================================================================
+ */
+body {
+  font-family: var(--font-stack);
+  background: var(--primary-purple);
+}
+
+body *::selection {
+  background: var(--primary-purple);
+}
+
+h1,
+h2 {
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3.375rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-weight: 200;
+  font-size: 1.875rem;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.emphasis {
+  font-weight: 700;
+  font-style: italic;
+}
+
+p .emphasis {
+  font-weight: 600;
+}
+
+/* this is the purple block text effect */
+.blocked {
+  display: inline-block;
+  font-style: italic;
+  position: relative;
+  z-index: 100;
+  font-weight: 900;
+}
+
+.blocked::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  right: -4px;
+  top: 30px;
+  z-index: -10;
+  background-color: var(--primary-purple);
+}
+
+/*
+ * ELEMENTS ====================================================================
+ */
+
+/* section-white ---------------------------------------- */
+.section-white {
+  background: linear-gradient(#fff, #fafafc);
+  padding: 70px 0;
+  border-top: 8px solid var(--primary-purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hero ------------------- */
+.hero {
+  max-width: 580px;
+  padding: 20px;
+}
+
+/* sign-up */
+
+/* newsletter */
+
+/* how-it-works ----------- */
+.how-it-works {
+  display: flex;
+  max-width: 960px;
+}
+
+/* how-it-works__box */
+.how-it-works__box {
+  background: var(--purple-gradient);
+  box-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  color: var(--lightest-grey);
+}
+
+.how-it-works__box > svg * {
+  fill: currentColor;
+  box-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* section-purple --------------------------------------- */
+.section-purple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--purple-gradient);
+  color: var(--lightest-grey);
+}
+
+/* section-purple__reason */
+.section-purple__reason {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 16px;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  max-width: 940px;
+  border-top: 1px solid var(--not-white-but-purple);
+}
+
+/* footer ----------------------------------------------- */
+.footer {
+  background: var(--deep-purple);
+  color: var(--lightest-grey);
+}
+
+/* footer__cta */
+
+/* footer__small-print */
+
+/*
+ * RESPONSIVE ==================================================================
+ */
+@media only screen and (max-width: 470px) {
+  #mc_embed_signup_scroll {
+      flex-direction: column;
+  }
+}
