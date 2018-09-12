@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -112,6 +112,7 @@ p .emphasis {
 .how-it-works {
   display: flex;
   max-width: 960px;
+  justify-content: space-between;
 }
 
 /* how-it-works__box */
@@ -120,6 +121,20 @@ p .emphasis {
   box-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   color: var(--lightest-grey);
+  max-width: 256px;
+  max-height: 256px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.how-it-works__box > svg {
+  max-width: 96px;
+  max-height: 96px;
+  min-width: 48px;
+  min-height: 48px;
 }
 
 .how-it-works__box > svg * {
