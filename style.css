@@ -113,6 +113,13 @@ p .emphasis {
   display: flex;
   max-width: 960px;
   justify-content: space-between;
+  align-items: center;
+}
+
+.how-it-works__chevron {
+  margin: 32px;
+  width: 32px;
+  height: 53px;
 }
 
 /* how-it-works__box */
@@ -128,9 +135,17 @@ p .emphasis {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.how-it-works__box > h3 {
+  max-width: 180px;
+  margin: 32px 0 0 0;
 }
 
 .how-it-works__box > svg {
+  flex-grow: 1;
   max-width: 96px;
   max-height: 96px;
   min-width: 48px;
