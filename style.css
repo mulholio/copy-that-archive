@@ -12,6 +12,7 @@
   --purple-gradient: linear-gradient(-180deg, #5860CC 0%, #282EA1 100%);
   /* font */
   --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --standard-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0), 0 15px 35px 0 rgba(0, 0, 0, 0.25);
 }
 
 /*
@@ -105,6 +106,23 @@ p .emphasis {
 }
 
 /* sign-up */
+.embeddable-buttondown-form {
+  box-shadow: var(--standard-shadow);
+  display: flex;
+}
+
+.embeddable-buttondown-form input[type="submit"] {
+  margin-left: -5px;
+  padding: 0.5em 1em;
+  background: var(--purple-gradient);
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  padding: 0.5em 1em;
+  flex-grow: 1;
+}
 
 /* newsletter */
 
