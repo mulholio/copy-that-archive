@@ -1,113 +1,32 @@
+@import url("./node_modules/normalize.css");
+
+/*
+ * VARIABLES ===================================================================
+ */
 :root {
-  --primary-purple: #555BCF;
+  /* colors */
+  --primary-purple: #555bcf;
+  --lightest-grey: #f7fcff;
+  --deep-purple: #0a0d3b;
+  --not-white-but-purple: #9295ca;
+  --purple-gradient: linear-gradient(-180deg, #5860CC 0%, #282EA1 100%);
+  /* font */
   --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --standard-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0), 0 15px 35px 0 rgba(0, 0, 0, 0.25);
+  --darker-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1), 0 15px 35px 0 rgba(0, 0, 0, 0.25);
+  --purple-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1), 0 15px 35px 0 var(--primary-purple);
 }
 
-body {
-  margin: 0px;
-  background: var(--primary-purple);
-}
-
-/* Sections */
-
-.section-top {
-  background: linear-gradient(#fff, #fafafc);
-  /* height: 50vh; */
-  padding: 70px 0;
-  border-top: 8px solid var(--primary-purple);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-content {
-  max-width: 580px;
-  padding: 20px;
-}
-
-.section-purple {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.sub-section:first-child {
-  margin-top: 90px;
-}
-
-.sub-section {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 16px;
-  align-items: flex-start;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  max-width: 940px;
-  border-top: 1px solid #9295CA;
-}
-
-.sub-section h2 {
-  max-width: 210px;
-  margin-right: 100px;
-}
-
-.sub-section p {
-  max-width: 620px;
-}
-
-/* Mailchimp */
-
-#mc_embed_signup {
-  font-family: var(--font-stack);
-  transition: transform .5s ease-in-out;
-  border: 1px solid rgba(0,0,0,0);
-}
-
-#mc_embed_signup_scroll {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.06), 0 15px 35px rgba(0,0,0,.1);
-  display: flex;
-  justify-content: space-between;
-}
-
-#mc_embed_signup input {
-  border: none;
-  height: 2.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  outline: none;
-}
-
-#mc_embed_signup:hover {
-  transform: translateY(-2px);
-}
-
-#mc_embed_signup input[type="email"] {
-  font-size: 1.125rem;
-  width: 100%;
-  color: #778895;
-}
-
-#mc_embed_signup input[type='submit'] {
-  background: var(--primary-purple);
-  color: white;
-  font-weight: 600;
-  display: inline-block;
-}
-
-/* Typography */
-
+/*
+ * BASE ========================================================================
+ */
 body {
   font-family: var(--font-stack);
+  background: var(--primary-purple);
 }
 
 body *::selection {
   background: var(--primary-purple);
-}
-
-h1::selection,
-h4::selection
-h1 {
 }
 
 h1,
@@ -123,6 +42,10 @@ h2 {
   font-size: 2.25rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 h4 {
   font-weight: 200;
   font-size: 1.875rem;
@@ -134,40 +57,6 @@ p {
   line-height: 1.5;
 }
 
-.section-purple h2,
-.section-purple p {
-  color: #F7FCFF;
-}
-
-
-.blocked {
-  display: inline-block;
-  font-style: italic;
-  position: relative;
-  z-index: 100;
-  font-weight: 900;
-}
-
-h4 .blocked::after {
-  top: 15;
-}
-
-.blocked::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -2;
-  right: -4;
-  top: 30;
-  z-index: -10;
-  background-color: var(--primary-purple);
-}
-
-/* .italics-purple {
-  font-style: italic;
-  color: var(--primary-purple);
-} */
-
 .emphasis {
   font-weight: 700;
   font-style: italic;
@@ -177,8 +66,249 @@ p .emphasis {
   font-weight: 600;
 }
 
-@media only screen and (max-width: 470px) {
-  #mc_embed_signup_scroll {
-      flex-direction: column;
+/* this is the purple block text effect */
+.blocked {
+  display: inline-block;
+  font-style: italic;
+  position: relative;
+  z-index: 100;
+  font-weight: 900;
+}
+
+.blocked::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  right: -4px;
+  top: 30px;
+  z-index: -10;
+  background-color: var(--primary-purple);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*
+ * ELEMENTS ====================================================================
+ */
+
+.btn {
+  padding: 0.5em 1em;
+  background: var(--purple-gradient);
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+}
+
+/* section-white ---------------------------------------- */
+.section-white {
+  background-image: linear-gradient(#fff 50%, rgba(250, 250, 252, 0.75)), url('img/c.svg'), linear-gradient(#fff, #fafafc);
+  background-repeat: repeat;
+  padding: 70px 0;
+  border-top: 8px solid var(--primary-purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px);
+}
+
+/* hero ------------------- */
+.hero {
+  max-width: 580px;
+  padding: 20px;
+}
+
+/* sign-up */
+.embeddable-buttondown-form {
+  box-shadow: var(--standard-shadow);
+  display: flex;
+  border-radius: 4px;
+}
+
+.embeddable-buttondown-form input[type="submit"].btn {
+  margin-left: -5px;
+  border-radius: 0 4px 4px 0;
+}
+
+.embeddable-buttondown-form input[type="email"] {
+  padding: 1em 2em;
+  flex-grow: 1;
+  border: none;
+  border-radius: 4px;
+}
+
+input:focus {
+  box-shadow: var(--purple-shadow);
+  outline: none;
+}
+
+/* newsletter */
+
+/* how-it-works ----------- */
+.how-it-works {
+  display: flex;
+  max-width: 960px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 0 auto 0;
+}
+
+.how-it-works__chevron {
+  margin: 32px;
+  width: 32px;
+  height: 53px;
+}
+
+/* how-it-works__box */
+.how-it-works__box {
+  background: var(--purple-gradient);
+  box-shadow: var(--darker-shadow);
+  border-radius: 16px;
+  color: var(--lightest-grey);
+  max-width: 242px;
+  max-height: 180px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.how-it-works__box > h3 {
+  max-width: 180px;
+  margin: 32px 0 0 0;
+}
+
+.how-it-works__box > svg {
+  flex-grow: 1;
+  max-width: 96px;
+  max-height: 96px;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.how-it-works__box > svg * {
+  fill: currentColor;
+  box-shadow: 0 5px 15px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* section-purple --------------------------------------- */
+.section-purple {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--purple-gradient);
+  color: var(--lightest-grey);
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+/* section-purple__reason */
+.section-purple__reason {
+  display: flex;
+  margin: 0 0 0 0;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-top: 1px solid var(--not-white-but-purple);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.section-purple__reason-description {
+  /* flex-grow: 2; */
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.section-purple__reason-title {
+  flex-grow: 1;
+  min-width: 200px;
+  margin: 0 2em 0 0;
+}
+
+/* footer ----------------------------------------------- */
+.footer {
+  background: var(--deep-purple);
+  color: var(--lightest-grey);
+  padding: 60px 0;
+}
+
+/* footer__cta */
+.footer__cta {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
+
+.footer__cta-text h3,
+.footer__cta-text p {
+  margin: 0;
+}
+
+/* footer__small-print */
+.footer__small-print {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--not-white-but-purple);
+}
+
+.footer__small-print a {
+  color: white;
+}
+
+/*
+ * RESPONSIVE ==================================================================
+ */
+
+@media only screen and (max-width: 960px) {
+  .container {
+    padding: 0 1em;
+  }
+
+  .how-it-works__box {
+    margin: 0 1em;
+    min-height: 150px;
+  }
+
+  .how-it-works__box:first-child,
+  .how-it-works__box:last-child {
+    margin: none;
+  }
+
+  .how-it-works__chevron {
+    display: none;
   }
 }
+
+@media only screen and (max-width: 720px) {
+  .how-it-works {
+    flex-direction: column;
+  }
+
+  .how-it-works__box {
+    margin: 1em 0;
+  }
+
+  .how-it-works__box:first-child,
+  .how-it-works__box:last-child {
+    margin: none;
+  }
+
+  .section-purple__reason {
+    flex-direction: column;
+  }
+
+  .section-purple__reason-title {
+    margin-bottom: 12px;
+  }
+}
+
