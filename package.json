@@ -25,7 +25,5 @@
     "css",
     "html"
   ],
-  "dependencies": {
-    "normalize.css": "^8.0.0"
-  }
+  "dependencies": {}
 }
