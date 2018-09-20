@@ -99,6 +99,8 @@ p .emphasis {
   background: var(--purple-gradient);
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
   font-weight: 600;
   font-size: 1em;
   border: none;
