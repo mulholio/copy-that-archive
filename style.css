@@ -126,23 +126,33 @@ p .emphasis {
 }
 
 /* sign-up */
-.embeddable-buttondown-form {
+.email-form {
   box-shadow: var(--standard-shadow);
   display: flex;
   border-radius: 4px;
 }
 
-.embeddable-buttondown-form input[type="submit"].btn {
+.email-form__submit.btn {
   margin-left: -5px;
   border-radius: 0 4px 4px 0;
 }
 
-.embeddable-buttondown-form input[type="email"] {
-  padding: 1em 1.5em;
+.formkit-fields {
+  display: inline-flex;
   flex-grow: 1;
+}
+
+.formkit-field {
+  flex-grow: 1;
+}
+
+.email-form__email {
+  padding: 1em 1.5em;
   border: none;
-  border-radius: 4px;
+  border-radius: 4px 0 0 4px;
   font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 input:focus {
@@ -150,7 +160,19 @@ input:focus {
   outline: none;
 }
 
-/* newsletter */
+.formkit-alert-success {
+  margin: auto;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.formkit-alert-error {
+  padding: 0 0 0 1.5em;
+  color: var(--primary-purple);
+  font-weight: 600;
+}
 
 /* how-it-works ----------- */
 .how-it-works {
@@ -314,16 +336,20 @@ input:focus {
     margin-bottom: 12px;
   }
 
-  .embeddable-buttondown-form {
+  .email-form {
+    flex-wrap: wrap;
+  }
+  
+  .formkit-fields {
     flex-wrap: wrap;
   }
 
-  .embeddable-buttondown-form input[type="email"] {
+  .email-form__email {
     border-radius: 4px 4px 0 0;
     text-align: center;
   }
 
-  .embeddable-buttondown-form input[type="submit"].btn {
+  .email-form__submit.btn {
     margin-left: 0;
     border-radius: 0 0 4px 4px;
     width: 100%;
