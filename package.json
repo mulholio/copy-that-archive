@@ -1,0 +1,29 @@
+{
+  "name": "copy-that",
+  "version": "1.0.0",
+  "description": "A site dedicated to helping you learn front-end skills.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulholio/copy-that.git"
+  },
+  "author": "James Mulholland <james@jmulholland.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "stylelint": "^9.5.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mulholio/copy-that/issues"
+  },
+  "homepage": "https://github.com/mulholio/copy-that#readme",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "design",
+    "css",
+    "html"
+  ],
+  "dependencies": {}
+}
