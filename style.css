@@ -235,28 +235,8 @@ input:focus {
   padding-bottom: 60px;
 }
 
-/* section-purple__reason */
-.section-purple__reason {
-  display: flex;
-  margin: 0 0 0 0;
-  align-items: flex-start;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  border-top: 1px solid var(--not-white-but-purple);
-  justify-content: space-between;
-  width: 100%;
-}
-
-.section-purple__reason-description {
-  /* flex-grow: 2; */
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.section-purple__reason-title {
-  flex-grow: 1;
-  min-width: 200px;
-  margin: 0 2em 0 0;
+.section-purple a {
+  color: #fff;
 }
 
 /* footer ----------------------------------------------- */
@@ -339,7 +319,7 @@ input:focus {
   .email-form {
     flex-wrap: wrap;
   }
-  
+
   .formkit-fields {
     flex-wrap: wrap;
   }
