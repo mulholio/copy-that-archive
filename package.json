@@ -1,11 +1,11 @@
 {
-  "name": "copy-that",
+  "name": "copy-that-archive",
   "version": "1.0.0",
-  "description": "A site dedicated to helping you learn front-end skills.",
+  "description": "Arhive for a site dedicated to helping you learn front-end skills.",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mulholio/copy-that.git"
+    "url": "git+https://github.com/mulholio/copy-that-archive.git"
   },
   "author": "James Mulholland <james@jmulholland.com>",
   "license": "MIT",
@@ -13,13 +13,7 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0"
   },
-  "bugs": {
-    "url": "https://github.com/mulholio/copy-that/issues"
-  },
-  "homepage": "https://github.com/mulholio/copy-that#readme",
-  "scripts": {
-    "test": "test"
-  },
+  "homepage": "https://github.com/mulholio/copy-that-archive#readme",
   "keywords": [
     "design",
     "css",
